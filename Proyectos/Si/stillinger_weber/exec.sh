@@ -6,7 +6,7 @@
 # Script name: exec
 # Description: ejecutable para cálculo de GULP
 
-file_name='Si_edip'
+file_name='Si'
 
 rm -f $file_name.got
 gulp < $file_name.gin > $file_name.got
