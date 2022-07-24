@@ -1,4 +1,9 @@
-opti prop conp
+opti prop conp phon
+# opti: optimiza geometria
+# prop: calcula propiedades
+# conp: a presion constante
+# phon: fonones
+# nofreq: no escribir las frecuencias a cada k-point
 title
 prueba optimizacion Si
 end
