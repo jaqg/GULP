@@ -1,0 +1,393 @@
+********************************************************************************
+*                       GENERAL UTILITY LATTICE PROGRAM                        *
+*                                 Julian Gale                                  *
+*                       Curtin Institute for Computation                       *
+*                    School of Molecular and Life Sciences                     *
+*                    Curtin University, Western Australia                      *
+********************************************************************************
+* Version = 6.1.0 * Last modified =   8th July 2022                            *
+********************************************************************************
+*  optimise     - perform optimisation run                                     *
+*  conp         - constant pressure calculation                                *
+*  property     - calculate properties for final geometry                      *
+********************************************************************************
+* prueba optimizacion Si                                                       *
+********************************************************************************
+
+
+  Job Started  at 22:36.15 24th July       2022                               
+
+  Number of CPUs =     1
+
+
+  Total number of configurations input =      1
+
+********************************************************************************
+*  Input for Configuration =   1                                               *
+********************************************************************************
+
+  Formula = Si2                                                         
+
+  Number of irreducible atoms/shells =       2
+
+
+  Total number atoms/shells =       2
+
+  Dimensionality = 3               :  Bulk   
+
+
+  Symmetry :
+
+  Crystal family                   :  Cubic       
+  Crystal class  (Groth - 1921)    :  Cubic Hexakistetrahedral             
+
+  Space group (noncentrosymmetric) :  F -4 3 M        
+
+  Patterson group                  :  F m -3 m 
+
+  Cartesian lattice vectors (Angstroms) :
+
+        0.000000    2.700000    2.700000
+        2.700000    0.000000    2.700000
+        2.700000    2.700000    0.000000
+
+  Primitive cell parameters :            Full cell parameters :
+
+  a =   3.8184    alpha =  60.0000       a =   5.4000    alpha =  90.0000
+  b =   3.8184    beta  =  60.0000       b =   5.4000    beta  =  90.0000
+  c =   3.8184    gamma =  60.0000       c =   5.4000    gamma =  90.0000
+
+  Initial volumes (Angstroms**3):
+
+  Primitive cell =          39.366000    Full cell =         157.464000
+
+  Temperature of configuration =   0.00     K 
+
+  Pressure of configuration =         0.000 GPa 
+
+  Fractional coordinates of asymmetric unit :
+
+--------------------------------------------------------------------------------
+   No.  Atomic       x           y          z         Charge      Occupancy
+        Label      (Frac)      (Frac)     (Frac)        (e)         (Frac)  
+--------------------------------------------------------------------------------
+      1 Si    c    0.000000    0.000000    0.000000     0.00000    1.000000    
+      2 Si    c    0.250000    0.250000    0.250000     0.00000    1.000000    
+--------------------------------------------------------------------------------
+
+
+  Constraints : 
+
+--------------------------------------------------------------------------------
+  Constraint no.      Unconstrained     Constrained    Coefficient    Offset
+                         Variable         Variable
+--------------------------------------------------------------------------------
+           1              Strain 1        Strain 2       1.00000      0.0000
+           2              Strain 1        Strain 3       1.00000      0.0000
+--------------------------------------------------------------------------------
+
+
+********************************************************************************
+*  General input information                                                   *
+********************************************************************************
+
+  Species output for all configurations : 
+
+--------------------------------------------------------------------------------
+  Species    Type    Atomic    Atomic    Charge       Radii (Angs)     Library
+                     Number     Mass       (e)     Cova   Ionic  VDW   Symbol
+--------------------------------------------------------------------------------
+    Si       Core       14      28.09   0.000000   1.200  0.000  2.100          
+--------------------------------------------------------------------------------
+
+
+  Lattice summation method               =    Ewald          (3-D)
+                                         =    Parry          (2-D)
+                                         =    Saunders et al (1-D)
+  Accuracy factor for lattice sums       =   12.000
+
+
+  Analytic derivatives to be used
+
+  Time limit = Infinity
+
+  Maximum range for interatomic potentials =    100000.000000 Angstroms
+
+  General interatomic potentials :
+
+--------------------------------------------------------------------------------
+Atom  Types   Potential      Parameter       Value         Units   Cutoffs(Ang)
+  1     2                                                            Min /  Max 
+--------------------------------------------------------------------------------
+Si   c Si   c Still-Weber 2 SW2 A            15.284982    eV        0.000  3.771
+                            SW2 rho          2.0951000    Ang       
+                            SW2 B            11.603192    Ang^4     
+--------------------------------------------------------------------------------
+
+  General Three-body potentials :
+
+--------------------------------------------------------------------------------
+  Atoms       Potential      Parameter       Value         Units   Cutoffs(Ang)
+  1 / 2 / 3                                                          Min /  Max 
+--------------------------------------------------------------------------------
+Si    core    StillingerWeb Three-body cnst  45.532601    eV        0.000  3.771
+Si    core                  Three-body angl  109.47000    degrees   0.000  3.771
+Si    core                  Three-body rho1  2.5141200    Ang       0.000  7.542
+                            Three-body rho2  2.5141200    Ang       
+--------------------------------------------------------------------------------
+
+********************************************************************************
+*  Output for configuration   1                                                *
+********************************************************************************
+
+
+  Components of energy : 
+
+--------------------------------------------------------------------------------
+  Interatomic potentials     =          -8.66913035 eV    
+  Three-body potentials      =           0.00000001 eV    
+  Monopole - monopole (real) =           0.00000000 eV    
+  Monopole - monopole (recip)=           0.00000000 eV    
+  Monopole - monopole (total)=           0.00000000 eV    
+--------------------------------------------------------------------------------
+  Total lattice energy : 
+    Primitive unit cell      =          -8.66913034 eV    
+    Non-primitive unit cell  =         -34.67652135 eV    
+--------------------------------------------------------------------------------
+  Total lattice energy (in kJmol-1): 
+    Primitive unit cell      =            -836.4386 kJ/(mole unit cells)
+    Non-primitive unit cell  =           -3345.7542 kJ/(mole unit cells)
+--------------------------------------------------------------------------------
+
+
+  Number of variables =        1
+
+  Maximum number of calculations  =          1000
+  Maximum Hessian update interval =            10
+  Maximum step size               =   1.000000000
+  Maximum parameter tolerance     =   0.000010000
+  Maximum function  tolerance     =   0.000010000
+  Maximum gradient  tolerance     =   0.001000000
+  Maximum gradient  component     =   0.010000000
+
+  Symmetry constrained optimisation
+
+  Symmetry used for second derivatives
+
+  Cell parameters to be optimised using strains
+
+  Newton-Raphson optimiser to be used
+
+  BFGS hessian update to be used
+
+  Lower half triangular hessian to be used
+
+  Start of bulk optimisation :
+
+  Cycle:      0 Energy:        -8.669130  Gnorm:      1.314308  CPU:    0.006
+  ** Hessian calculated **
+  Cycle:      1 Energy:        -8.672876  Gnorm:      0.002788  CPU:    0.007
+
+
+  **** Optimisation achieved ****
+
+
+  Final energy =      -8.67287607 eV      
+  Final Gnorm  =       0.00000003
+
+  Components of energy : 
+
+--------------------------------------------------------------------------------
+  Interatomic potentials     =          -8.67287608 eV    
+  Three-body potentials      =           0.00000001 eV    
+  Monopole - monopole (real) =           0.00000000 eV    
+  Monopole - monopole (recip)=           0.00000000 eV    
+  Monopole - monopole (total)=           0.00000000 eV    
+--------------------------------------------------------------------------------
+  Total lattice energy : 
+    Primitive unit cell      =          -8.67287607 eV    
+    Non-primitive unit cell  =         -34.69150429 eV    
+--------------------------------------------------------------------------------
+  Total lattice energy (in kJmol-1): 
+    Primitive unit cell      =            -836.8000 kJ/(mole unit cells)
+    Non-primitive unit cell  =           -3347.1999 kJ/(mole unit cells)
+--------------------------------------------------------------------------------
+
+  Final asymmetric unit coordinates :
+
+--------------------------------------------------------------------------------
+   No.  Atomic        x           y           z         Radius
+        Label       (Frac)      (Frac)      (Frac)       (Angs) 
+--------------------------------------------------------------------------------
+     1  Si    c     0.000000    0.000000    0.000000    0.000000
+     2  Si    c     0.250000    0.250000    0.250000    0.000000
+--------------------------------------------------------------------------------
+
+  Final Cartesian lattice vectors (Angstroms) :
+
+        0.000000    2.715475    2.715475
+        2.715475    0.000000    2.715475
+        2.715475    2.715475    0.000000
+
+
+  Final cell parameters and derivatives :
+
+--------------------------------------------------------------------------------
+       a            3.840261 Angstrom     dE/de1(xx)     0.000000 eV/strain
+       b            3.840261 Angstrom     dE/de2(yy)     0.000000 eV/strain
+       c            3.840261 Angstrom     dE/de3(zz)     0.000000 eV/strain
+       alpha       60.000000 Degrees      dE/de4(yz)     0.000000 eV/strain
+       beta        60.000000 Degrees      dE/de5(xz)     0.000000 eV/strain
+       gamma       60.000000 Degrees      dE/de6(xy)     0.000000 eV/strain
+--------------------------------------------------------------------------------
+
+  Primitive cell volume =            40.046759 Angs**3
+
+  Density of cell =      2.329541 g/cm**3
+
+  Non-primitive lattice parameters :
+
+  a    =     5.430950  b   =     5.430950  c    =     5.430950
+  alpha=    90.000000  beta=    90.000000  gamma=    90.000000
+
+  Non-primitive cell volume =           160.187034 Angs**3
+
+
+  Final internal derivatives :
+
+--------------------------------------------------------------------------------
+   No.  Atomic          a             b             c           Radius
+        Label          (eV)          (eV)          (eV)        (eV/Angs)
+--------------------------------------------------------------------------------
+      1 Si    c       0.000000      0.000000      0.000000      0.000000
+      2 Si    c       0.000000      0.000000      0.000000      0.000000
+--------------------------------------------------------------------------------
+  Maximum abs         0.000000      0.000000      0.000000      0.000000
+--------------------------------------------------------------------------------
+
+
+
+  Elastic Constant Matrix: (Units=GPa)
+
+-------------------------------------------------------------------------------
+  Indices      1         2         3         4         5         6    
+-------------------------------------------------------------------------------
+       1    151.4203   76.4200   76.4200   -0.0000    0.0000   -0.0000
+       2     76.4200  151.4203   76.4200    0.0000    0.0000   -0.0000
+       3     76.4200   76.4200  151.4203    0.0000    0.0000    0.0000
+       4     -0.0000    0.0000    0.0000   56.4453    0.0000   -0.0000
+       5      0.0000    0.0000    0.0000    0.0000   56.4453   -0.0000
+       6     -0.0000   -0.0000    0.0000   -0.0000   -0.0000   56.4453
+-------------------------------------------------------------------------------
+
+
+  Elastic Compliance Matrix: (Units=1/GPa)
+
+-------------------------------------------------------------------------------
+  Indices      1         2         3         4         5         6    
+-------------------------------------------------------------------------------
+       1    0.009984 -0.003349 -0.003349  0.000000 -0.000000  0.000000
+       2   -0.003349  0.009984 -0.003349 -0.000000  0.000000  0.000000
+       3   -0.003349 -0.003349  0.009984 -0.000000 -0.000000 -0.000000
+       4    0.000000 -0.000000 -0.000000  0.017716 -0.000000  0.000000
+       5   -0.000000  0.000000 -0.000000 -0.000000  0.017716  0.000000
+       6    0.000000  0.000000 -0.000000  0.000000  0.000000  0.017716
+-------------------------------------------------------------------------------
+
+  Mechanical properties :
+
+-------------------------------------------------------------------------------
+  Convention :                    Reuss         Voigt         Hill
+-------------------------------------------------------------------------------
+  Bulk  Modulus (GPa)     =     101.42006     101.42006     101.42006
+  Shear Modulus (GPa)     =      46.95631      48.86721      47.91176
+-------------------------------------------------------------------------------
+  Velocity S-wave (km/s)  =       4.48964       4.58009       4.53509
+  Velocity P-wave (km/s)  =       8.39121       8.45613       8.42373
+-------------------------------------------------------------------------------
+  Compressibility (1/GPa) =    0.00985998
+-------------------------------------------------------------------------------
+  Stress axis :                     x             y             z
+-------------------------------------------------------------------------------
+  Youngs Moduli (GPa)     =     100.15618     100.15618     100.15618
+-------------------------------------------------------------------------------
+  Poissons Ratio (x)      =                     0.33541       0.33541
+  Poissons Ratio (y)      =       0.33541                     0.33541
+  Poissons Ratio (z)      =       0.33541       0.33541
+-------------------------------------------------------------------------------
+
+
+  Piezoelectric Strain Matrix: (Units=C/m**2)
+
+-------------------------------------------------------------------------------
+  Indices      1         2         3         4         5         6    
+-------------------------------------------------------------------------------
+       x    -0.00000  -0.00000  -0.00000  -0.00000  -0.00000  -0.00000
+       y    -0.00000  -0.00000  -0.00000  -0.00000  -0.00000  -0.00000
+       z    -0.00000  -0.00000  -0.00000  -0.00000  -0.00000  -0.00000
+-------------------------------------------------------------------------------
+
+
+  Piezoelectric Stress Matrix: (Units=10**-11 C/N)
+
+-------------------------------------------------------------------------------
+  Indices      1         2         3         4         5         6    
+-------------------------------------------------------------------------------
+       x     0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+       y     0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+       z     0.00000   0.00000   0.00000   0.00000   0.00000   0.00000
+-------------------------------------------------------------------------------
+
+
+  Static dielectric constant tensor : 
+
+-------------------------------------------------------------------------------
+              x         y         z
+-------------------------------------------------------------------------------
+       x     1.00000   0.00000   0.00000
+       y     0.00000   1.00000   0.00000
+       z     0.00000   0.00000   1.00000
+--------------------------------------------------------------------------------
+
+  Static refractive indices : 
+
+-------------------------------------------------------------------------------
+    1 =    1.00000      2 =    1.00000      3 =    1.00000
+-------------------------------------------------------------------------------
+
+
+  Time to end of optimisation =       0.0084 seconds
+
+
+  Peak dynamic memory used =       1.81 MB 
+
+
+  Timing analysis for GULP :
+
+--------------------------------------------------------------------------------
+  Task / Subroutine                                          Time (Seconds)
+--------------------------------------------------------------------------------
+  Calculation of real space energy and derivatives                0.0001
+  Calculation of real space energy using symmetry                 0.0011
+  Calculation of three-body energy and derivatives                0.0004
+  Symmetry generation of equivalent positions                     0.0015
+--------------------------------------------------------------------------------
+  Total CPU time                                                  0.0084
+--------------------------------------------------------------------------------
+
+
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!! WARNING : potential type not available in Marvin
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+  Marvin file written as Si.mvn
+  XR file written as Si.xr
+
+
+
+  **** GULP has completed with 1 warning - beware! ****
+
+  Job Finished at 22:36.15 24th July       2022                               
+
