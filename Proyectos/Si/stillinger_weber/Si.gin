@@ -1,9 +1,4 @@
-opti prop conp phon
-# opti: optimiza geometria
-# prop: calcula propiedades
-# conp: a presion constante
-# phon: fonones
-# nofreq: no escribir las frecuencias a cada k-point
+opti prop conp phon nofreq dist include_imag inte pot raman
 title
 prueba optimizacion Si
 end
@@ -21,5 +16,4 @@ sw2
 Si core Si core 15.284982 2.0951 11.6031922831 0.0 3.77118
 sw3
 Si Si Si 45.532601 109.47 2.51412 2.51412 0.0 3.77118 0.0 3.77118 0.0 7.54236
-output xr Si
-output marvin Si.mvn
+output phon Si
