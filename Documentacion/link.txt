@@ -1,3 +1,8 @@
 https://www.epj-conferences.org/
 https://www.epj-conferences.org/articles/epjconf/abs/2011/04/epjconf_ft2m2010_03005/epjconf_ft2m2010_03005.html
 https://indico.cern.ch/event/804609/
+
+------------------------------------------------
+-- INTRODUCTION TO STATISTICAL MECHANICS LAB ---
+------------------------------------------------
+https://www.ch.ic.ac.uk/harrison/Teaching/Thermal_Expansion/index.html
