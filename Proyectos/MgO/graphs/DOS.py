@@ -22,6 +22,7 @@ plt.style.use('density_of_states')
 sustancia = r'$\mathrm{MgO}$'
 funcional = ''
 nombre_grafica = os.path.basename(__file__).replace(".py", ".pdf")
+nombre_grafica_png = os.path.basename(__file__).replace(".py", ".png")
 
 #
 # --- GRAFICA ---
@@ -36,9 +37,13 @@ fig.subplots_adjust(left=.15, bottom=.16, right=.99, top=.97)
 #
 # --- BUSH ---
 #
-fichero_datos = './Bush_1994/DOS.dens'
+fichero_datos = '../Bush_1994/DOS.dens'
 y, x = np.loadtxt(fichero_datos, unpack=True, skiprows=2)
 ax.plot(x,y, label=r'Bush 1994')
+#
+# fichero_datos = '../Binks_1994/DOS.dens'
+# y, x = np.loadtxt(fichero_datos, unpack=True, skiprows=2)
+# ax.plot(x,y, label=r'Binks 1994')
 #
 ax.set(title=r'Density of States'+' '+sustancia+' '+funcional,
        ylabel=r'Frequency, $\nu\ (\mathrm{cm^{-1}})$',
@@ -48,4 +53,5 @@ ax.set_ylim(ymin,ymax)
 ax.legend()
 #
 plt.savefig(nombre_grafica, transparent='True', bbox_inches='tight')
+plt.savefig(nombre_grafica_png, transparent='True', bbox_inches='tight')
 # plt.show()
