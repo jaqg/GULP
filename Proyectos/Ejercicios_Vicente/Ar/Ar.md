@@ -2,6 +2,8 @@
 
 El Argon se encuentra en fase gas naturalmente a temperatura ambiente (22 grados Celsius), encontrando su punto triple a 83.80 K y 68.89 kPa. Es un gas noble, comunmente usado en iluminación o aplicaciones de almacenamiento [Seminario Dinámica Molecular - Vicente Timón].
 
+![Ar](https://github.com/jaqg/GULP/blob/main/Proyectos/Ejercicios_Vicente/Ar/N%3D64/T%3D60K/TS%3D1fs/Ar_rho%3D0.0207125_N%3D64_cubic_60.png "Ar")
+
 Llevamos a cabo cálculos de dinámica molecular, en las siguientes condiciones:
 
 ## Cálculos ##
