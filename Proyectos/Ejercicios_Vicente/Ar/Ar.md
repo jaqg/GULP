@@ -5,27 +5,44 @@ grados Celsius), encontrando su punto triple a 83.80 K y 68.89 kPa. Es un
 gas noble, comunmente usado en iluminación o aplicaciones de almacenamiento
 [Seminario Dinámica Molecular - Vicente Timón].
 
-<!-- Llevamos a cabo cálculos de dinámica molecular, en las siguientes condiciones: -->
+Llevamos a cabo cálculos de dinámica molecular, en las siguientes condiciones:
 
-<!-- ## Cálculos ## -->
+## Cálculos ##
 
-<!-- ## Sistema 1 con $\boldsymbol{N_1=64}$ átomos ## -->
+### Sistema 1 con $\boldsymbol{N_1=64}$ átomos ###
 
-<!-- - Tiempo (aproximado) de cómputo: 7.8 s -->
+- Tiempo (aproximado) de cómputo para $T=60\ \mathrm{K},\ \delta t = 1\
+        \mathrm{fs}$: **7.8 s**
 
-<!-- ### Para $\boldsymbol{T=60}$ K ### -->
+    #### Para $\boldsymbol{T=60\ \mathrm{K}}$ ####
 
-<!-- ### Para $\boldsymbol{T=298}$ K ### -->
+    - $\delta t = 0.1\ \mathrm{fs} \implies$ [Ar_rho=0.0207125_N=64_cubic_60_TS=01.gin](https://github.com/jaqg/GULP/blob/main/Proyectos/Ejercicios_Vicente/Ar/N%3D64/T%3D60K/TS%3D0.1fs/Ar_rho%3D0.0207125_N%3D64_cubic_60_TS%3D01.gin)
+    - $\delta t = 1\ \mathrm{fs} \implies$ [Ar_rho=0.0207125_N=64_cubic_60.gin](https://github.com/jaqg/GULP/blob/main/Proyectos/Ejercicios_Vicente/Ar/N%3D64/T%3D60K/TS%3D1fs/Ar_rho%3D0.0207125_N%3D64_cubic_60.gin)
+    - $\delta t = 10\ \mathrm{fs} \implies$ [Ar_rho=0.0207125_N=64_cubic_60_TS=10.gin](https://github.com/jaqg/GULP/blob/main/Proyectos/Ejercicios_Vicente/Ar/N%3D64/T%3D60K/TS%3D10fs/Ar_rho%3D0.0207125_N%3D64_cubic_60_TS%3D10.gin)
 
-<!-- ### Para $\boldsymbol{T=83.80}$ K y $\boldsymbol{P=68.89}$ kPa (Punto triple) ### -->
+    #### Para $\boldsymbol{T=298\ \mathrm{K}}$ ####
 
-<!-- ## Sistema 2 con $\boldsymbol{N_2=512}$ átomos ## -->
+    - $\delta t = 1\ \mathrm{fs} \implies$ [Ar_rho=0.0207125_N=64_cubic_298.gin](https://github.com/jaqg/GULP/blob/main/Proyectos/Ejercicios_Vicente/Ar/N%3D64/T%3D298K/TS%3D1fs/Ar_rho%3D0.0207125_N%3D64_cubic_298.gin)
 
-<!-- - Tiempo (aproximado) de cómputo: 211.5 s (3.5 min) -->
 
-<!-- ### Para $\boldsymbol{T=60}$ K ### -->
+    #### Para el **Punto Triple**: $\boldsymbol{T=83.80\ \mathrm{K}}$ y $\boldsymbol{P=68.89\ \mathrm{kPa}}$ ####
 
-<!-- ### Para $\boldsymbol{T=298}$ K ### -->
+    - $\delta t = 1\ \mathrm{fs} \implies$ [Ar_rho=0.0207125_N=64_cubic_TP.gin](https://github.com/jaqg/GULP/blob/main/Proyectos/Ejercicios_Vicente/Ar/N%3D64/Punto_triple/TS%3D1fs/Ar_rho%3D0.0207125_N%3D64_cubic_TP.gin)
+
+### Sistema 2 con $\boldsymbol{N_2=512}$ átomos ###
+
+- Tiempo (aproximado) de cómputo para $T=60\ \mathrm{K},\ \delta t = 1\
+        \mathrm{fs}$: **211.5 s (3.5 min)**
+
+    #### Para $\boldsymbol{T=60\ \mathrm{K}}$ ####
+
+    - $\delta t = 1\ \mathrm{fs} \implies$ [Ar_rho=0.0207125_N=512_cubic_60.gin](https://github.com/jaqg/GULP/blob/main/Proyectos/Ejercicios_Vicente/Ar/N%3D512/T%3D60K/TS%3D1fs/Ar_rho%3D0.0207125_N%3D512_cubic_60.gin)
+
+    #### Para $\boldsymbol{T=298\ \mathrm{K}}$ ####
+
+    - $\delta t = 1\ \mathrm{fs} \implies$ [Ar_rho=0.0207125_N=64_cubic_298.gin](https://github.com/jaqg/GULP/blob/main/Proyectos/Ejercicios_Vicente/Ar/N%3D512/T%3D298K/TS%3D1fs/Ar_rho%3D0.0207125_N%3D512_cubic_298.gin)
+
+    - $\delta t = 10\ \mathrm{fs} \implies$ [Ar_rho=0.0207125_N=64_cubic_298_TS=10.gin](https://github.com/jaqg/GULP/blob/main/Proyectos/Ejercicios_Vicente/Ar/N%3D512/T%3D298K/TS%3D10fs/Ar_rho%3D0.0207125_N%3D512_cubic_298_TS%3D10.gin)
 
 ## Cuestiones ##
 
