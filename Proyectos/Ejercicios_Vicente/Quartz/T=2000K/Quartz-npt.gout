@@ -1,0 +1,1281 @@
+********************************************************************************
+*                       GENERAL UTILITY LATTICE PROGRAM                        *
+*                                 Julian Gale                                  *
+*                       Curtin Institute for Computation                       *
+*                    School of Molecular and Life Sciences                     *
+*                    Curtin University, Western Australia                      *
+********************************************************************************
+* Version = 6.1.0 * Last modified =   8th July 2022                            *
+********************************************************************************
+*  single       - perform a single point run                                   *
+*  md           - perform molecular dynamics run                               *
+*  conp         - constant pressure calculation                                *
+********************************************************************************
+* Example of a shell model MD run for quartz                                   *
+********************************************************************************
+
+
+  Job Started  at 23:29.20  5th August     2022
+
+  Number of CPUs =     1
+
+
+  Total number of configurations input =      1
+
+********************************************************************************
+*  Input for Configuration =   1                                               *
+********************************************************************************
+
+  Formula = Si3O6
+
+  Number of irreducible atoms/shells =      15
+
+
+  Total number atoms/shells =      15
+
+  Dimensionality = 3               :  Bulk
+
+
+
+  Cartesian lattice vectors (Angstroms) :
+
+        4.833380    0.000000    0.000000
+       -2.416690    4.185830    0.000000
+        0.000000    0.000000    5.345010
+
+  Cell parameters (Angstroms/Degrees):
+
+  a =       4.8334    alpha =  90.0000
+  b =       4.8334    beta  =  90.0000
+  c =       5.3450    gamma = 120.0000
+
+  Initial cell volume =         108.138673 Angs**3
+
+  Temperature of configuration =  0.200E+04 K
+
+  Pressure of configuration =         0.000 GPa
+
+  Fractional coordinates of asymmetric unit :
+
+--------------------------------------------------------------------------------
+   No.  Atomic       x           y          z         Charge      Occupancy
+        Label      (Frac)      (Frac)     (Frac)        (e)         (Frac)
+--------------------------------------------------------------------------------
+      1 Si    c    0.463746 *  0.000000 *  0.333333 *   4.00000    1.000000
+      2 Si    c    0.000000 *  0.463746 *  0.666667 *   4.00000    1.000000
+      3 Si    c    0.536254 *  0.536254 *  0.000000 *   4.00000    1.000000
+      4 O     c    0.408155 *  0.278819 *  0.224995 *   0.86902    1.000000
+      5 O     c    0.721181 *  0.129335 *  0.558329 *   0.86902    1.000000
+      6 O     c    0.870665 *  0.591845 *  0.891662 *   0.86902    1.000000
+      7 O     c    0.129335 *  0.721181 *  0.441671 *   0.86902    1.000000
+      8 O     c    0.591845 *  0.870665 *  0.108338 *   0.86902    1.000000
+      9 O     c    0.278819 *  0.408155 *  0.775005 *   0.86902    1.000000
+     10 O     s    0.428076 *  0.276220 *  0.213085 *  -2.86902    1.000000
+     11 O     s    0.723780 *  0.151855 *  0.546418 *  -2.86902    1.000000
+     12 O     s    0.848145 *  0.571924 *  0.879751 *  -2.86902    1.000000
+     13 O     s    0.151855 *  0.723780 *  0.453582 *  -2.86902    1.000000
+     14 O     s    0.571924 *  0.848145 *  0.120249 *  -2.86902    1.000000
+     15 O     s    0.276220 *  0.428076 *  0.786915 *  -2.86902    1.000000
+--------------------------------------------------------------------------------
+
+
+
+********************************************************************************
+*  General input information                                                   *
+********************************************************************************
+
+  Species output for all configurations :
+
+--------------------------------------------------------------------------------
+  Species    Type    Atomic    Atomic    Charge       Radii (Angs)     Library
+                     Number     Mass       (e)     Cova   Ionic  VDW   Symbol
+--------------------------------------------------------------------------------
+    Si       Core       14      28.09   4.000000   1.200  0.000  2.100
+    O        Core        8      14.40   0.869020   0.730  0.000  1.360
+    O        Shell       8       1.60  -2.869020   0.730  0.000  1.360
+--------------------------------------------------------------------------------
+
+
+  Lattice summation method               =    Ewald          (3-D)
+                                         =    Parry          (2-D)
+                                         =    Saunders et al (1-D)
+  Accuracy factor for lattice sums       =   12.000
+
+
+  Analytic derivatives to be used
+
+  Time limit = Infinity
+
+  Maximum range for interatomic potentials =        12.000000 Angstroms
+
+  Taper potentials to zero over   1.0000 Angstroms using polynomial
+
+  General interatomic potentials :
+
+--------------------------------------------------------------------------------
+Atom  Types   Potential      Parameter       Value         Units   Cutoffs(Ang)
+  1     2                                                            Min /  Max
+--------------------------------------------------------------------------------
+Si   c O    s Buckingham    Buckingham A     1283.9070    eV        0.000 12.000
+                            Buckingham rho  0.32052000    Ang
+                            Buckingham C     10.661580    eV*Ang^6
+--------------------------------------------------------------------------------
+O    s O    s Buckingham    Buckingham A     22764.000    eV        0.000 12.000
+                            Buckingham rho  0.14900000    Ang
+                            Buckingham C     27.879000    eV*Ang^6
+--------------------------------------------------------------------------------
+O    c O    s Spring (c-s)  Spring k 2       74.920000    eV*Ang^-2 0.000  0.800
+                            Spring k 4       0.0000000    eV*Ang^-4
+--------------------------------------------------------------------------------
+
+  General Three-body potentials :
+
+--------------------------------------------------------------------------------
+  Atoms       Potential      Parameter       Value         Units   Cutoffs(Ang)
+  1 / 2 / 3                                                          Min /  Max
+--------------------------------------------------------------------------------
+Si    core    Harmonic      Three-body cnst  2.0972400    eV*rad^-2 0.000  1.800
+O     shel                  Three-body angl  109.47000    degrees   0.000  1.800
+O     shel                  Three-body k4    0.0000000    eV*rad^-4 0.000  3.500
+                            Three-body k3    0.0000000    eV*rad^-3
+--------------------------------------------------------------------------------
+
+********************************************************************************
+*  Output for configuration   1                                                *
+********************************************************************************
+
+
+  Components of energy :
+
+--------------------------------------------------------------------------------
+  Interatomic potentials     =         106.71938202 eV
+  Three-body potentials      =           0.04837195 eV
+  Monopole - monopole (real) =        -108.09380331 eV
+  Monopole - monopole (recip)=        -384.78487081 eV
+  Monopole - monopole (total)=        -492.87867412 eV
+--------------------------------------------------------------------------------
+  Total lattice energy       =        -386.11092015 eV
+--------------------------------------------------------------------------------
+  Total lattice energy       =          -37253.8015 kJ/(mole unit cells)
+--------------------------------------------------------------------------------
+
+  MSI Archive (version 3) open for Movie as quartz-npt_3D.arc
+
+
+  Equations of motion will be integrated using the leapfrog Verlet algorithm.
+
+  Core-shell wave numbers:
+
+    O   :    3761.37 cm**(-1)
+
+  Above wave numbers must be larger than the vibrational modes for this system.
+
+
+********************************************************************************
+*  Molecular Dynamics                                                          *
+********************************************************************************
+
+  Isothermal/baric ensemble (NPT) to be used
+
+  Friction for temperature bath =           0.050000
+  Friction for pressure    bath =           0.050000
+
+  No. of mobile ions        =                  9
+
+  No. of degrees of freedom =                 24
+
+  Time step                 =           0.000100 ps
+  Equilibration time        =           0.500000 ps
+  Production time           =           0.200000 ps
+  Scaling time              =           0.500000 ps
+  Scaling frequency         =           0.000100 ps
+  Sampling frequency        =           0.010000 ps
+  Write frequency           =           0.010000 ps
+  TD-Force start time       =           0.000000 ps
+  TD-Field start time       =           0.000000 ps
+
+
+
+  Molecular dynamics equilibration :
+
+  ** Time :            0.01000 ps :
+     Properties:                   Instantaneous       Averaged
+       Kinetic energy    (eV) =       2.051210          2.051210
+       Potential energy  (eV) =    -383.593239       -383.593239
+       Total energy      (eV) =    -381.542029       -381.542029
+       Temperature       (K)  =    1983.606653       1983.606653
+       C/S temperature   (K)  =       0.501523          0.501523
+       Pressure         (GPa) =       2.766335          2.766335
+       Cell parameter : a (A) =       4.834662          4.834662
+       Cell parameter : b (A) =       4.833123          4.833123
+       Cell parameter : c (A) =       5.348764          5.348764
+       Cell angle : alpha (o) =      90.001847         90.001847
+       Cell angle : beta  (o) =      90.023070         90.023070
+       Cell angle : gamma (o) =     119.983746        119.983746
+       Cell volume :   (A**3) =     108.255302        108.255302
+  ** Time :            0.02000 ps :
+     Properties:                   Instantaneous       Averaged
+       Kinetic energy    (eV) =       2.060497          2.055853
+       Potential energy  (eV) =    -382.904426       -383.248833
+       Total energy      (eV) =    -380.843929       -381.192979
+       Temperature       (K)  =    1992.587120       1988.096887
+       C/S temperature   (K)  =       0.636209          0.568866
+       Pressure         (GPa) =      -1.480491          0.642753
+       Cell parameter : a (A) =       4.838912          4.836787
+       Cell parameter : b (A) =       4.830667          4.831895
+       Cell parameter : c (A) =       5.348979          5.348872
+       Cell angle : alpha (o) =      89.960385         89.981116
+       Cell angle : beta  (o) =      90.065927         90.044498
+       Cell angle : gamma (o) =     120.012282        119.998014
+       Cell volume :   (A**3) =     108.268560        108.261931
+  ** Time :            0.03000 ps :
+     Properties:                   Instantaneous       Averaged
+       Kinetic energy    (eV) =       2.073936          2.061881
+       Potential energy  (eV) =    -382.906501       -383.134722
+       Total energy      (eV) =    -380.832566       -381.072841
+       Temperature       (K)  =    2005.583188       1993.925654
+       C/S temperature   (K)  =       0.276593          0.471442
+       Pressure         (GPa) =       3.102341          1.462557
+       Cell parameter : a (A) =       4.846617          4.840064
+       Cell parameter : b (A) =       4.831820          4.831870
+       Cell parameter : c (A) =       5.343533          5.347092
+       Cell angle : alpha (o) =      89.929283         89.963838
+       Cell angle : beta  (o) =      90.034743         90.041247
+       Cell angle : gamma (o) =     120.079097        120.025042
+       Cell volume :   (A**3) =     108.283307        108.269056
+  ** Time :            0.04000 ps :
+     Properties:                   Instantaneous       Averaged
+       Kinetic energy    (eV) =       2.067394          2.063259
+       Potential energy  (eV) =    -384.696548       -383.525179
+       Total energy      (eV) =    -382.629154       -381.461919
+       Temperature       (K)  =    1999.257600       1995.258640
+       C/S temperature   (K)  =       0.304130          0.429614
+       Pressure         (GPa) =       5.620438          2.500060
+       Cell parameter : a (A) =       4.851322          4.842878
+       Cell parameter : b (A) =       4.836054          4.832916
+       Cell parameter : c (A) =       5.344355          5.346408
+       Cell angle : alpha (o) =      90.005572         89.974272
+       Cell angle : beta  (o) =      89.945640         90.017345
+       Cell angle : gamma (o) =     120.099427        120.043638
+       Cell volume :   (A**3) =     108.477818        108.321247
+  ** Time :            0.05000 ps :
+     Properties:                   Instantaneous       Averaged
+       Kinetic energy    (eV) =       2.053460          2.061299
+       Potential energy  (eV) =    -383.202454       -383.460634
+       Total energy      (eV) =    -381.148994       -381.399334
+       Temperature       (K)  =    1985.782213       1993.363355
+       C/S temperature   (K)  =       0.252189          0.394129
+       Pressure         (GPa) =       9.058124          3.806058
+       Cell parameter : a (A) =       4.849715          4.844246
+       Cell parameter : b (A) =       4.841079          4.834549
+       Cell parameter : c (A) =       5.351665          5.347459
+       Cell angle : alpha (o) =      90.132408         90.005899
+       Cell angle : beta  (o) =      89.943008         90.002478
+       Cell angle : gamma (o) =     120.026217        120.040154
+       Cell volume :   (A**3) =     108.783226        108.413643
+  ** Time :            0.06000 ps :
+     Properties:                   Instantaneous       Averaged
+       Kinetic energy    (eV) =       2.064150          2.061774
+       Potential energy  (eV) =    -383.546874       -383.475007
+       Total energy      (eV) =    -381.482724       -381.413233
+       Temperature       (K)  =    1996.119988       1993.822794
+       C/S temperature   (K)  =       0.310783          0.380238
+       Pressure         (GPa) =       4.645837          3.936163
+       Cell parameter : a (A) =       4.847492          4.844787
+       Cell parameter : b (A) =       4.847566          4.836718
+       Cell parameter : c (A) =       5.358720          5.349336
+       Cell angle : alpha (o) =      90.172819         90.033719
+       Cell angle : beta  (o) =      89.995484         90.001312
+       Cell angle : gamma (o) =     119.935031        120.022633
+       Cell volume :   (A**3) =     109.122403        108.531769
+  ** Time :            0.07000 ps :
+     Properties:                   Instantaneous       Averaged
+       Kinetic energy    (eV) =       2.069351          2.062857
+       Potential energy  (eV) =    -383.828482       -383.525503
+       Total energy      (eV) =    -381.759132       -381.462647
+       Temperature       (K)  =    2001.149379       1994.869449
+       C/S temperature   (K)  =       0.299867          0.368756
+       Pressure         (GPa) =       5.182412          4.108790
+       Cell parameter : a (A) =       4.844352          4.844725
+       Cell parameter : b (A) =       4.853062          4.839053
+       Cell parameter : c (A) =       5.360375          5.350913
+       Cell angle : alpha (o) =      90.169546         90.053123
+       Cell angle : beta  (o) =      89.947250         89.993589
+       Cell angle : gamma (o) =     119.854395        119.998599
+       Cell volume :   (A**3) =     109.297608        108.641175
+  ** Time :            0.08000 ps :
+     Properties:                   Instantaneous       Averaged
+       Kinetic energy    (eV) =       2.065071          2.063133
+       Potential energy  (eV) =    -384.697538       -383.672008
+       Total energy      (eV) =    -382.632467       -381.608874
+       Temperature       (K)  =    1997.010431       1995.137071
+       C/S temperature   (K)  =       0.337456          0.364844
+       Pressure         (GPa) =       1.311725          3.753522
+       Cell parameter : a (A) =       4.848802          4.845234
+       Cell parameter : b (A) =       4.856464          4.841229
+       Cell parameter : c (A) =       5.360954          5.352168
+       Cell angle : alpha (o) =      90.188243         90.070013
+       Cell angle : beta  (o) =      89.908695         89.982977
+       Cell angle : gamma (o) =     119.870145        119.982542
+       Cell volume :   (A**3) =     109.469177        108.744675
+  ** Time :            0.09000 ps :
+     Properties:                   Instantaneous       Averaged
+       Kinetic energy    (eV) =       2.061434          2.062945
+       Potential energy  (eV) =    -383.453427       -383.647721
+       Total energy      (eV) =    -381.391993       -381.584776
+       Temperature       (K)  =    1993.493324       1994.954433
+       C/S temperature   (K)  =       0.247309          0.351784
+       Pressure         (GPa) =      -0.328807          3.299693
+       Cell parameter : a (A) =       4.851940          4.845979
+       Cell parameter : b (A) =       4.855074          4.842768
+       Cell parameter : c (A) =       5.362570          5.353324
+       Cell angle : alpha (o) =      90.157101         90.079689
+       Cell angle : beta  (o) =      89.962115         89.980659
+       Cell angle : gamma (o) =     119.929138        119.976609
+       Cell volume :   (A**3) =     109.476968        108.826041
+  ** Time :            0.10000 ps :
+     Properties:                   Instantaneous       Averaged
+       Kinetic energy    (eV) =       2.067789          2.063429
+       Potential energy  (eV) =    -384.092522       -383.692201
+       Total energy      (eV) =    -382.024733       -381.628772
+       Temperature       (K)  =    1999.639188       1995.422908
+       C/S temperature   (K)  =       0.243125          0.340918
+       Pressure         (GPa) =      -6.123873          2.360921
+       Cell parameter : a (A) =       4.848143          4.846196
+       Cell parameter : b (A) =       4.851784          4.843669
+       Cell parameter : c (A) =       5.362771          5.354269
+       Cell angle : alpha (o) =      90.074735         90.079194
+       Cell angle : beta  (o) =      89.996875         89.982281
+       Cell angle : gamma (o) =     119.907850        119.969733
+       Cell volume :   (A**3) =     109.344993        108.877936
+  ** Time :            0.11000 ps :
+     Properties:                   Instantaneous       Averaged
+       Kinetic energy    (eV) =       2.051567          2.062351
+       Potential energy  (eV) =    -384.029097       -383.722828
+       Total energy      (eV) =    -381.977530       -381.660477
+       Temperature       (K)  =    1983.951500       1994.380053
+       C/S temperature   (K)  =       0.520038          0.357202
+       Pressure         (GPa) =      -3.299173          1.851589
+       Cell parameter : a (A) =       4.846037          4.846181
+       Cell parameter : b (A) =       4.846441          4.843921
+       Cell parameter : c (A) =       5.357361          5.354550
+       Cell angle : alpha (o) =      90.104092         90.081457
+       Cell angle : beta  (o) =      89.931935         89.977704
+       Cell angle : gamma (o) =     119.896291        119.963056
+       Cell volume :   (A**3) =     109.079569        108.896267
+  ** Time :            0.12000 ps :
+     Properties:                   Instantaneous       Averaged
+       Kinetic energy    (eV) =       2.072359          2.063185
+       Potential energy  (eV) =    -383.069387       -383.668375
+       Total energy      (eV) =    -380.997028       -381.605190
+       Temperature       (K)  =    2004.058363       1995.186579
+       C/S temperature   (K)  =       0.269872          0.349925
+       Pressure         (GPa) =       2.832645          1.932596
+       Cell parameter : a (A) =       4.850033          4.846502
+       Cell parameter : b (A) =       4.848360          4.844291
+       Cell parameter : c (A) =       5.355569          5.354635
+       Cell angle : alpha (o) =      90.214871         90.092575
+       Cell angle : beta  (o) =      89.903034         89.971481
+       Cell angle : gamma (o) =     119.940051        119.961139
+       Cell volume :   (A**3) =     109.127641        108.915548
+  ** Time :            0.13000 ps :
+     Properties:                   Instantaneous       Averaged
+       Kinetic energy    (eV) =       2.066248          2.063420
+       Potential energy  (eV) =    -384.087448       -383.700611
+       Total energy      (eV) =    -382.021201       -381.637191
+       Temperature       (K)  =    1998.148661       1995.414431
+       C/S temperature   (K)  =       0.317078          0.347398
+       Pressure         (GPa) =      -0.120604          1.773582
+       Cell parameter : a (A) =       4.847196          4.846556
+       Cell parameter : b (A) =       4.851982          4.844883
+       Cell parameter : c (A) =       5.355435          5.354696
+       Cell angle : alpha (o) =      90.282926         90.107217
+       Cell angle : beta  (o) =      89.943344         89.969317
+       Cell angle : gamma (o) =     119.892919        119.955891
+       Cell volume :   (A**3) =     109.193501        108.936929
+  ** Time :            0.14000 ps :
+     Properties:                   Instantaneous       Averaged
+       Kinetic energy    (eV) =       2.065364          2.063559
+       Potential energy  (eV) =    -383.908183       -383.715438
+       Total energy      (eV) =    -381.842818       -381.651878
+       Temperature       (K)  =    1997.294498       1995.548722
+       C/S temperature   (K)  =       0.366462          0.348760
+       Pressure         (GPa) =      -1.139392          1.566274
+       Cell parameter : a (A) =       4.841447          4.846191
+       Cell parameter : b (A) =       4.852434          4.845422
+       Cell parameter : c (A) =       5.356251          5.354807
+       Cell angle : alpha (o) =      90.205916         90.114267
+       Cell angle : beta  (o) =      89.980543         89.970119
+       Cell angle : gamma (o) =     119.845741        119.948024
+       Cell volume :   (A**3) =     109.143017        108.951649
+  ** Time :            0.15000 ps :
+     Properties:                   Instantaneous       Averaged
+       Kinetic energy    (eV) =       2.059909          2.063316
+       Potential energy  (eV) =    -384.239923       -383.750403
+       Total energy      (eV) =    -382.180013       -381.687087
+       Temperature       (K)  =    1992.019112       1995.313415
+       C/S temperature   (K)  =       0.309169          0.346120
+       Pressure         (GPa) =      -1.255097          1.378947
+       Cell parameter : a (A) =       4.841905          4.845905
+       Cell parameter : b (A) =       4.850275          4.845746
+       Cell parameter : c (A) =       5.357370          5.354978
+       Cell angle : alpha (o) =      90.171895         90.118109
+       Cell angle : beta  (o) =      89.942777         89.968296
+       Cell angle : gamma (o) =     119.884118        119.943763
+       Cell volume :   (A**3) =     109.085949        108.960603
+  ** Time :            0.16000 ps :
+     Properties:                   Instantaneous       Averaged
+       Kinetic energy    (eV) =       2.071019          2.063797
+       Potential energy  (eV) =    -383.932214       -383.761766
+       Total energy      (eV) =    -381.861196       -381.697969
+       Temperature       (K)  =    2002.762265       1995.778968
+       C/S temperature   (K)  =       0.128288          0.332506
+       Pressure         (GPa) =       0.560094          1.327753
+       Cell parameter : a (A) =       4.847842          4.846026
+       Cell parameter : b (A) =       4.849680          4.845992
+       Cell parameter : c (A) =       5.355356          5.355002
+       Cell angle : alpha (o) =      90.201793         90.123339
+       Cell angle : beta  (o) =      89.937792         89.966390
+       Cell angle : gamma (o) =     119.955091        119.944471
+       Cell volume :   (A**3) =     109.087267        108.968519
+  ** Time :            0.17000 ps :
+     Properties:                   Instantaneous       Averaged
+       Kinetic energy    (eV) =       2.061939          2.063688
+       Potential energy  (eV) =    -384.148914       -383.784540
+       Total energy      (eV) =    -382.086975       -381.720852
+       Temperature       (K)  =    1993.981643       1995.673243
+       C/S temperature   (K)  =       0.191084          0.324187
+       Pressure         (GPa) =       1.349792          1.328644
+       Cell parameter : a (A) =       4.848428          4.846167
+       Cell parameter : b (A) =       4.849363          4.846190
+       Cell parameter : c (A) =       5.354267          5.354959
+       Cell angle : alpha (o) =      90.211326         90.128515
+       Cell angle : beta  (o) =      89.966480         89.966395
+       Cell angle : gamma (o) =     119.907890        119.942319
+       Cell volume :   (A**3) =     109.122726        108.977590
+  ** Time :            0.18000 ps :
+     Properties:                   Instantaneous       Averaged
+       Kinetic energy    (eV) =       2.066446          2.063841
+       Potential energy  (eV) =    -383.837368       -383.787475
+       Total energy      (eV) =    -381.770921       -381.723634
+       Temperature       (K)  =    1998.340908       1995.821446
+       C/S temperature   (K)  =       0.284489          0.321981
+       Pressure         (GPa) =       5.513125          1.559540
+       Cell parameter : a (A) =       4.845372          4.846123
+       Cell parameter : b (A) =       4.851458          4.846483
+       Cell parameter : c (A) =       5.359955          5.355236
+       Cell angle : alpha (o) =      90.159510         90.130237
+       Cell angle : beta  (o) =      89.948059         89.965376
+       Cell angle : gamma (o) =     119.869182        119.938256
+       Cell volume :   (A**3) =     109.259810        108.993269
+  ** Time :            0.19000 ps :
+     Properties:                   Instantaneous       Averaged
+       Kinetic energy    (eV) =       2.072229          2.064283
+       Potential energy  (eV) =    -384.235476       -383.811054
+       Total energy      (eV) =    -382.163247       -381.746771
+       Temperature       (K)  =    2003.932540       1996.248346
+       C/S temperature   (K)  =       0.389137          0.325516
+       Pressure         (GPa) =       3.128955          1.639218
+       Cell parameter : a (A) =       4.843524          4.845986
+       Cell parameter : b (A) =       4.858307          4.847105
+       Cell parameter : c (A) =       5.365162          5.355759
+       Cell angle : alpha (o) =      90.232035         90.135595
+       Cell angle : beta  (o) =      89.885072         89.961150
+       Cell angle : gamma (o) =     119.870697        119.934700
+       Cell volume :   (A**3) =     109.476447        109.018699
+  ** Time :            0.20000 ps :
+     Properties:                   Instantaneous       Averaged
+       Kinetic energy    (eV) =       2.067161          2.064427
+       Potential energy  (eV) =    -383.480008       -383.794501
+       Total energy      (eV) =    -381.412847       -381.730075
+       Temperature       (K)  =    1999.031855       1996.387521
+       C/S temperature   (K)  =       0.560354          0.337258
+       Pressure         (GPa) =       6.018512          1.855533
+       Cell parameter : a (A) =       4.847152          4.846045
+       Cell parameter : b (A) =       4.860263          4.847763
+       Cell parameter : c (A) =       5.367890          5.356365
+       Cell angle : alpha (o) =      90.320035         90.144817
+       Cell angle : beta  (o) =      89.907083         89.958446
+       Cell angle : gamma (o) =     119.865592        119.931245
+       Cell volume :   (A**3) =     109.662999        109.050914
+  ** Time :            0.21000 ps :
+     Properties:                   Instantaneous       Averaged
+       Kinetic energy    (eV) =       2.063984          2.064405
+       Potential energy  (eV) =    -384.419334       -383.824255
+       Total energy      (eV) =    -382.355350       -381.759850
+       Temperature       (K)  =    1995.959733       1996.367151
+       C/S temperature   (K)  =       0.505508          0.345270
+       Pressure         (GPa) =      -0.866921          1.724079
+       Cell parameter : a (A) =       4.853451          4.846397
+       Cell parameter : b (A) =       4.859452          4.848319
+       Cell parameter : c (A) =       5.368114          5.356925
+       Cell angle : alpha (o) =      90.260742         90.150337
+       Cell angle : beta  (o) =      89.975208         89.959244
+       Cell angle : gamma (o) =     119.880656        119.928836
+       Cell volume :   (A**3) =     109.775627        109.085425
+  ** Time :            0.22000 ps :
+     Properties:                   Instantaneous       Averaged
+       Kinetic energy    (eV) =       2.057869          2.064108
+       Potential energy  (eV) =    -383.706289       -383.818893
+       Total energy      (eV) =    -381.648421       -381.754785
+       Temperature       (K)  =    1990.045892       1996.079821
+       C/S temperature   (K)  =       0.266154          0.341674
+       Pressure         (GPa) =      -2.117106          1.550599
+       Cell parameter : a (A) =       4.847622          4.846453
+       Cell parameter : b (A) =       4.859544          4.848830
+       Cell parameter : c (A) =       5.368950          5.357471
+       Cell angle : alpha (o) =      90.176449         90.151524
+       Cell angle : beta  (o) =      89.955598         89.959079
+       Cell angle : gamma (o) =     119.846748        119.925105
+       Cell volume :   (A**3) =     109.701018        109.113406
+  ** Time :            0.23000 ps :
+     Properties:                   Instantaneous       Averaged
+       Kinetic energy    (eV) =       2.071613          2.064435
+       Potential energy  (eV) =    -383.851443       -383.820308
+       Total energy      (eV) =    -381.779830       -381.755874
+       Temperature       (K)  =    2003.337284       1996.395363
+       C/S temperature   (K)  =       0.217154          0.336260
+       Pressure         (GPa) =      -3.853622          1.317308
+       Cell parameter : a (A) =       4.844233          4.846357
+       Cell parameter : b (A) =       4.857670          4.849214
+       Cell parameter : c (A) =       5.369499          5.357994
+       Cell angle : alpha (o) =      90.231038         90.154981
+       Cell angle : beta  (o) =      89.874916         89.955419
+       Cell angle : gamma (o) =     119.860987        119.922317
+       Cell volume :   (A**3) =     109.577283        109.133575
+  ** Time :            0.24000 ps :
+     Properties:                   Instantaneous       Averaged
+       Kinetic energy    (eV) =       2.066667          2.064528
+       Potential energy  (eV) =    -384.128946       -383.833168
+       Total energy      (eV) =    -382.062279       -381.768641
+       Temperature       (K)  =    1998.553980       1996.485305
+       C/S temperature   (K)  =       0.415904          0.339578
+       Pressure         (GPa) =      -3.703296          1.110021
+       Cell parameter : a (A) =       4.847958          4.846423
+       Cell parameter : b (A) =       4.853109          4.849376
+       Cell parameter : c (A) =       5.365164          5.358293
+       Cell angle : alpha (o) =      90.276108         90.160028
+       Cell angle : beta  (o) =      89.873243         89.951995
+       Cell angle : gamma (o) =     119.913424        119.921947
+       Cell volume :   (A**3) =     109.412194        109.145184
+  ** Time :            0.25000 ps :
+     Properties:                   Instantaneous       Averaged
+       Kinetic energy    (eV) =       2.064221          2.064515
+       Potential energy  (eV) =    -383.311791       -383.812313
+       Total energy      (eV) =    -381.247571       -381.747798
+       Temperature       (K)  =    1996.188388       1996.473428
+       C/S temperature   (K)  =       0.043205          0.327723
+       Pressure         (GPa) =      -1.636450          1.001371
+       Cell parameter : a (A) =       4.843887          4.846322
+       Cell parameter : b (A) =       4.853121          4.849526
+       Cell parameter : c (A) =       5.361272          5.358412
+       Cell angle : alpha (o) =      90.246402         90.163483
+       Cell angle : beta  (o) =      89.935190         89.951323
+       Cell angle : gamma (o) =     119.870766        119.919899
+       Cell volume :   (A**3) =     109.288230        109.150906
+  ** Time :            0.26000 ps :
+     Properties:                   Instantaneous       Averaged
+       Kinetic energy    (eV) =       2.062759          2.064448
+       Potential energy  (eV) =    -384.171285       -383.826120
+       Total energy      (eV) =    -382.108527       -381.761672
+       Temperature       (K)  =    1994.774790       1996.408096
+       C/S temperature   (K)  =       0.296246          0.326513
+       Pressure         (GPa) =      -0.010898          0.962868
+       Cell parameter : a (A) =       4.837039          4.845965
+       Cell parameter : b (A) =       4.854370          4.849712
+       Cell parameter : c (A) =       5.361747          5.358540
+       Cell angle : alpha (o) =      90.199627         90.164873
+       Cell angle : beta  (o) =      89.923950         89.950270
+       Cell angle : gamma (o) =     119.809076        119.915637
+       Cell volume :   (A**3) =     109.239330        109.154307
+  ** Time :            0.27000 ps :
+     Properties:                   Instantaneous       Averaged
+       Kinetic energy    (eV) =       2.066306          2.064517
+       Potential energy  (eV) =    -384.306237       -383.843902
+       Total energy      (eV) =    -382.239931       -381.779385
+       Temperature       (K)  =    1998.205418       1996.474663
+       C/S temperature   (K)  =       0.428345          0.330284
+       Pressure         (GPa) =       1.429561          0.979808
+       Cell parameter : a (A) =       4.837857          4.845665
+       Cell parameter : b (A) =       4.854040          4.849873
+       Cell parameter : c (A) =       5.365041          5.358781
+       Cell angle : alpha (o) =      90.246888         90.167911
+       Cell angle : beta  (o) =      89.893538         89.948169
+       Cell angle : gamma (o) =     119.842977        119.912946
+       Cell volume :   (A**3) =     109.280085        109.158965
+  ** Time :            0.28000 ps :
+     Properties:                   Instantaneous       Averaged
+       Kinetic energy    (eV) =       2.067862          2.064636
+       Potential energy  (eV) =    -383.579871       -383.834472
+       Total energy      (eV) =    -381.512009       -381.769836
+       Temperature       (K)  =    1999.709726       1996.590201
+       C/S temperature   (K)  =       0.438525          0.334150
+       Pressure         (GPa) =       2.914486          1.047924
+       Cell parameter : a (A) =       4.844847          4.845635
+       Cell parameter : b (A) =       4.855252          4.850065
+       Cell parameter : c (A) =       5.365076          5.359006
+       Cell angle : alpha (o) =      90.271198         90.171600
+       Cell angle : beta  (o) =      89.923496         89.947288
+       Cell angle : gamma (o) =     119.908818        119.912798
+       Cell volume :   (A**3) =     109.393486        109.167341
+  ** Time :            0.29000 ps :
+     Properties:                   Instantaneous       Averaged
+       Kinetic energy    (eV) =       2.065265          2.064658
+       Potential energy  (eV) =    -383.871999       -383.835766
+       Total energy      (eV) =    -381.806734       -381.771109
+       Temperature       (K)  =    1997.198012       1996.611160
+       C/S temperature   (K)  =       0.339824          0.334346
+       Pressure         (GPa) =      -2.167336          0.937013
+       Cell parameter : a (A) =       4.844398          4.845593
+       Cell parameter : b (A) =       4.856690          4.850293
+       Cell parameter : c (A) =       5.363086          5.359147
+       Cell angle : alpha (o) =      90.203959         90.172715
+       Cell angle : beta  (o) =      89.969054         89.948039
+       Cell angle : gamma (o) =     119.888651        119.911966
+       Cell volume :   (A**3) =     109.397801        109.175288
+  ** Time :            0.30000 ps :
+     Properties:                   Instantaneous       Averaged
+       Kinetic energy    (eV) =       2.067920          2.064767
+       Potential energy  (eV) =    -384.283443       -383.850689
+       Total energy      (eV) =    -382.215522       -381.785922
+       Temperature       (K)  =    1999.765926       1996.716319
+       C/S temperature   (K)  =       0.415105          0.337037
+       Pressure         (GPa) =      -0.493606          0.889815
+       Cell parameter : a (A) =       4.842097          4.845476
+       Cell parameter : b (A) =       4.853777          4.850409
+       Cell parameter : c (A) =       5.364448          5.359323
+       Cell angle : alpha (o) =      90.161248         90.172333
+       Cell angle : beta  (o) =      89.933364         89.947549
+       Cell angle : gamma (o) =     119.860973        119.910266
+       Cell volume :   (A**3) =     109.338717        109.180735
+  ** Time :            0.31000 ps :
+     Properties:                   Instantaneous       Averaged
+       Kinetic energy    (eV) =       2.071026          2.064968
+       Potential energy  (eV) =    -384.248387       -383.863518
+       Total energy      (eV) =    -382.177361       -381.798549
+       Temperature       (K)  =    2002.769388       1996.911580
+       C/S temperature   (K)  =       0.489987          0.341971
+       Pressure         (GPa) =       2.967021          0.956517
+       Cell parameter : a (A) =       4.840911          4.845329
+       Cell parameter : b (A) =       4.855526          4.850574
+       Cell parameter : c (A) =       5.366054          5.359540
+       Cell angle : alpha (o) =      90.247364         90.174754
+       Cell angle : beta  (o) =      89.899030         89.945984
+       Cell angle : gamma (o) =     119.866511        119.908854
+       Cell volume :   (A**3) =     109.377389        109.187079
+  ** Time :            0.32000 ps :
+     Properties:                   Instantaneous       Averaged
+       Kinetic energy    (eV) =       2.062204          2.064882
+       Potential energy  (eV) =    -383.852520       -383.863174
+       Total energy      (eV) =    -381.790317       -381.798292
+       Temperature       (K)  =    1994.237829       1996.828025
+       C/S temperature   (K)  =       0.356736          0.342433
+       Pressure         (GPa) =       4.375006          1.061727
+       Cell parameter : a (A) =       4.844677          4.845309
+       Cell parameter : b (A) =       4.860128          4.850873
+       Cell parameter : c (A) =       5.366575          5.359760
+       Cell angle : alpha (o) =      90.300379         90.178679
+       Cell angle : beta  (o) =      89.920310         89.945182
+       Cell angle : gamma (o) =     119.873409        119.907747
+       Cell volume :   (A**3) =     109.568692        109.199004
+  ** Time :            0.33000 ps :
+     Properties:                   Instantaneous       Averaged
+       Kinetic energy    (eV) =       2.064287          2.064864
+       Potential energy  (eV) =    -383.381964       -383.848592
+       Total energy      (eV) =    -381.317677       -381.783728
+       Temperature       (K)  =    1996.253023       1996.810600
+       C/S temperature   (K)  =       0.278539          0.340497
+       Pressure         (GPa) =       1.401661          1.071061
+       Cell parameter : a (A) =       4.845899          4.845326
+       Cell parameter : b (A) =       4.862120          4.851214
+       Cell parameter : c (A) =       5.367058          5.359981
+       Cell angle : alpha (o) =      90.237438         90.180460
+       Cell angle : beta  (o) =      89.953286         89.945428
+       Cell angle : gamma (o) =     119.855235        119.906156
+       Cell volume :   (A**3) =     109.671667        109.213328
+  ** Time :            0.34000 ps :
+     Properties:                   Instantaneous       Averaged
+       Kinetic energy    (eV) =       2.071586          2.065062
+       Potential energy  (eV) =    -384.278729       -383.861243
+       Total energy      (eV) =    -382.207142       -381.796181
+       Temperature       (K)  =    2003.311283       1997.001797
+       C/S temperature   (K)  =       0.258796          0.338094
+       Pressure         (GPa) =      -5.874337          0.867372
+       Cell parameter : a (A) =       4.842137          4.845233
+       Cell parameter : b (A) =       4.861040          4.851503
+       Cell parameter : c (A) =       5.368799          5.360241
+       Cell angle : alpha (o) =      90.187824         90.180677
+       Cell angle : beta  (o) =      89.927955         89.944914
+       Cell angle : gamma (o) =     119.844672        119.904347
+       Cell volume :   (A**3) =     109.609792        109.224988
+  ** Time :            0.35000 ps :
+     Properties:                   Instantaneous       Averaged
+       Kinetic energy    (eV) =       2.061579          2.064962
+       Potential energy  (eV) =    -384.218592       -383.871453
+       Total energy      (eV) =    -382.157012       -381.806491
+       Temperature       (K)  =    1993.634297       1996.905583
+       C/S temperature   (K)  =       0.649741          0.346998
+       Pressure         (GPa) =      -1.672398          0.796560
+       Cell parameter : a (A) =       4.839428          4.845067
+       Cell parameter : b (A) =       4.857641          4.851678
+       Cell parameter : c (A) =       5.366090          5.360408
+       Cell angle : alpha (o) =      90.230447         90.182099
+       Cell angle : beta  (o) =      89.909329         89.943897
+       Cell angle : gamma (o) =     119.875764        119.903531
+       Cell volume :   (A**3) =     109.382241        109.229481
+  ** Time :            0.36000 ps :
+     Properties:                   Instantaneous       Averaged
+       Kinetic energy    (eV) =       2.071440          2.065142
+       Potential energy  (eV) =    -383.186337       -383.852422
+       Total energy      (eV) =    -381.114897       -381.787280
+       Temperature       (K)  =    2003.169725       1997.079587
+       C/S temperature   (K)  =       0.329489          0.346511
+       Pressure         (GPa) =       0.652936          0.792307
+       Cell parameter : a (A) =       4.847403          4.845132
+       Cell parameter : b (A) =       4.855649          4.851788
+       Cell parameter : c (A) =       5.364051          5.360509
+       Cell angle : alpha (o) =      90.254776         90.184117
+       Cell angle : beta  (o) =      89.906943         89.942870
+       Cell angle : gamma (o) =     119.926983        119.904182
+       Cell volume :   (A**3) =     109.419475        109.234759
+  ** Time :            0.37000 ps :
+     Properties:                   Instantaneous       Averaged
+       Kinetic energy    (eV) =       2.070584          2.065289
+       Potential energy  (eV) =    -384.384471       -383.866802
+       Total energy      (eV) =    -382.313887       -381.801513
+       Temperature       (K)  =    2002.341847       1997.221810
+       C/S temperature   (K)  =       0.698457          0.356023
+       Pressure         (GPa) =      -1.580397          0.728461
+       Cell parameter : a (A) =       4.845303          4.845136
+       Cell parameter : b (A) =       4.855507          4.851889
+       Cell parameter : c (A) =       5.361520          5.360536
+       Cell angle : alpha (o) =      90.203158         90.184632
+       Cell angle : beta  (o) =      89.939793         89.942787
+       Cell angle : gamma (o) =     119.870600        119.903274
+       Cell volume :   (A**3) =     109.379516        109.238671
+  ** Time :            0.38000 ps :
+     Properties:                   Instantaneous       Averaged
+       Kinetic energy    (eV) =       2.061186          2.065181
+       Potential energy  (eV) =    -383.578026       -383.859202
+       Total energy      (eV) =    -381.516840       -381.794021
+       Temperature       (K)  =    1993.254247       1997.117400
+       C/S temperature   (K)  =       0.289508          0.354273
+       Pressure         (GPa) =      -0.574685          0.694571
+       Cell parameter : a (A) =       4.838543          4.844963
+       Cell parameter : b (A) =       4.856574          4.852012
+       Cell parameter : c (A) =       5.362700          5.360593
+       Cell angle : alpha (o) =      90.201215         90.185068
+       Cell angle : beta  (o) =      89.924203         89.942298
+       Cell angle : gamma (o) =     119.831867        119.901395
+       Cell volume :   (A**3) =     109.317396        109.240743
+  ** Time :            0.39000 ps :
+     Properties:                   Instantaneous       Averaged
+       Kinetic energy    (eV) =       2.067839          2.065249
+       Potential energy  (eV) =    -383.912471       -383.860568
+       Total energy      (eV) =    -381.844632       -381.795319
+       Temperature       (K)  =    1999.687665       1997.183305
+       C/S temperature   (K)  =       0.589604          0.360307
+       Pressure         (GPa) =       3.289173          0.760784
+       Cell parameter : a (A) =       4.841069          4.844863
+       Cell parameter : b (A) =       4.855873          4.852111
+       Cell parameter : c (A) =       5.366472          5.360744
+       Cell angle : alpha (o) =      90.267232         90.187175
+       Cell angle : beta  (o) =      89.896051         89.941112
+       Cell angle : gamma (o) =     119.892773        119.901174
+       Cell volume :   (A**3) =     109.368317        109.244014
+  ** Time :            0.40000 ps :
+     Properties:                   Instantaneous       Averaged
+       Kinetic energy    (eV) =       2.067173          2.065297
+       Potential energy  (eV) =    -384.125357       -383.867188
+       Total energy      (eV) =    -382.058184       -381.801891
+       Temperature       (K)  =    1999.043428       1997.229808
+       C/S temperature   (K)  =       0.478408          0.363260
+       Pressure         (GPa) =       3.672279          0.832361
+       Cell parameter : a (A) =       4.849407          4.844977
+       Cell parameter : b (A) =       4.857505          4.852246
+       Cell parameter : c (A) =       5.367843          5.360922
+       Cell angle : alpha (o) =      90.261444         90.189032
+       Cell angle : beta  (o) =      89.920285         89.940592
+       Cell angle : gamma (o) =     119.960357        119.902654
+       Cell volume :   (A**3) =     109.547118        109.251592
+  ** Time :            0.41000 ps :
+     Properties:                   Instantaneous       Averaged
+       Kinetic energy    (eV) =       2.069502          2.065400
+       Potential energy  (eV) =    -383.859602       -383.867003
+       Total energy      (eV) =    -381.790100       -381.801603
+       Temperature       (K)  =    2001.296152       1997.328987
+       C/S temperature   (K)  =       0.490606          0.366366
+       Pressure         (GPa) =       2.164457          0.863989
+       Cell parameter : a (A) =       4.848260          4.845057
+       Cell parameter : b (A) =       4.860700          4.852452
+       Cell parameter : c (A) =       5.368391          5.361104
+       Cell angle : alpha (o) =      90.191991         90.189104
+       Cell angle : beta  (o) =      89.974090         89.941409
+       Cell angle : gamma (o) =     119.907181        119.902764
+       Cell volume :   (A**3) =     109.663486        109.261638
+  ** Time :            0.42000 ps :
+     Properties:                   Instantaneous       Averaged
+       Kinetic energy    (eV) =       2.066182          2.065419
+       Potential energy  (eV) =    -384.084183       -383.872174
+       Total energy      (eV) =    -382.018001       -381.806755
+       Temperature       (K)  =    1998.085450       1997.346998
+       C/S temperature   (K)  =       0.552153          0.370789
+       Pressure         (GPa) =      -0.082310          0.841035
+       Cell parameter : a (A) =       4.846286          4.845086
+       Cell parameter : b (A) =       4.861337          4.852664
+       Cell parameter : c (A) =       5.370912          5.361337
+       Cell angle : alpha (o) =      90.187265         90.189060
+       Cell angle : beta  (o) =      89.943343         89.941455
+       Cell angle : gamma (o) =     119.876515        119.902139
+       Cell volume :   (A**3) =     109.718559        109.272517
+  ** Time :            0.43000 ps :
+     Properties:                   Instantaneous       Averaged
+       Kinetic energy    (eV) =       2.059792          2.065288
+       Potential energy  (eV) =    -384.012872       -383.875446
+       Total energy      (eV) =    -381.953081       -381.810158
+       Temperature       (K)  =    1991.905542       1997.220452
+       C/S temperature   (K)  =       0.351904          0.370350
+       Pressure         (GPa) =      -0.129594          0.818741
+       Cell parameter : a (A) =       4.846710          4.845124
+       Cell parameter : b (A) =       4.860154          4.852838
+       Cell parameter : c (A) =       5.371896          5.361583
+       Cell angle : alpha (o) =      90.266942         90.190871
+       Cell angle : beta  (o) =      89.898632         89.940459
+       Cell angle : gamma (o) =     119.912534        119.902381
+       Cell volume :   (A**3) =     109.681298        109.282023
+  ** Time :            0.44000 ps :
+     Properties:                   Instantaneous       Averaged
+       Kinetic energy    (eV) =       2.073031          2.065464
+       Potential energy  (eV) =    -383.684340       -383.871103
+       Total energy      (eV) =    -381.611308       -381.805639
+       Temperature       (K)  =    2004.708844       1997.390643
+       C/S temperature   (K)  =       0.380032          0.370570
+       Pressure         (GPa) =       0.224302          0.804884
+       Cell parameter : a (A) =       4.850342          4.845242
+       Cell parameter : b (A) =       4.862512          4.853058
+       Cell parameter : c (A) =       5.369269          5.361758
+       Cell angle : alpha (o) =      90.302032         90.193398
+       Cell angle : beta  (o) =      89.907796         89.939717
+       Cell angle : gamma (o) =     119.943099        119.903306
+       Cell volume :   (A**3) =     109.728951        109.292181
+  ** Time :            0.45000 ps :
+     Properties:                   Instantaneous       Averaged
+       Kinetic energy    (eV) =       2.068303          2.065527
+       Potential energy  (eV) =    -384.319278       -383.881062
+       Total energy      (eV) =    -382.250975       -381.815535
+       Temperature       (K)  =    2000.136115       1997.451654
+       C/S temperature   (K)  =       0.644385          0.376655
+       Pressure         (GPa) =      -3.354615          0.713136
+       Cell parameter : a (A) =       4.848237          4.845309
+       Cell parameter : b (A) =       4.861112          4.853237
+       Cell parameter : c (A) =       5.365760          5.361846
+       Cell angle : alpha (o) =      90.249494         90.194644
+       Cell angle : beta  (o) =      89.958073         89.940124
+       Cell angle : gamma (o) =     119.893140        119.903080
+       Cell volume :   (A**3) =     109.633507        109.299766
+  ** Time :            0.46000 ps :
+     Properties:                   Instantaneous       Averaged
+       Kinetic energy    (eV) =       2.059286          2.065391
+       Potential energy  (eV) =    -383.557435       -383.874027
+       Total energy      (eV) =    -381.498148       -381.808636
+       Temperature       (K)  =    1991.416570       1997.320456
+       C/S temperature   (K)  =       0.375139          0.376622
+       Pressure         (GPa) =      -0.770553          0.681544
+       Cell parameter : a (A) =       4.844520          4.845292
+       Cell parameter : b (A) =       4.859787          4.853379
+       Cell parameter : c (A) =       5.365653          5.361929
+       Cell angle : alpha (o) =      90.233037         90.195479
+       Cell angle : beta  (o) =      89.944743         89.940225
+       Cell angle : gamma (o) =     119.882279        119.902628
+       Cell volume :   (A**3) =     109.529533        109.304761
+  ** Time :            0.47000 ps :
+     Properties:                   Instantaneous       Averaged
+       Kinetic energy    (eV) =       2.066501          2.065415
+       Potential energy  (eV) =    -383.685332       -383.870012
+       Total energy      (eV) =    -381.618831       -381.804597
+       Temperature       (K)  =    1998.393287       1997.343282
+       C/S temperature   (K)  =       0.671758          0.382901
+       Pressure         (GPa) =      -0.273632          0.661231
+       Cell parameter : a (A) =       4.843378          4.845251
+       Cell parameter : b (A) =       4.860020          4.853521
+       Cell parameter : c (A) =       5.368470          5.362068
+       Cell angle : alpha (o) =      90.300442         90.197712
+       Cell angle : beta  (o) =      89.897567         89.939317
+       Cell angle : gamma (o) =     119.916929        119.902932
+       Cell volume :   (A**3) =     109.527804        109.309506
+  ** Time :            0.48000 ps :
+     Properties:                   Instantaneous       Averaged
+       Kinetic energy    (eV) =       2.069384          2.065498
+       Potential energy  (eV) =    -384.452631       -383.882150
+       Total energy      (eV) =    -382.383247       -381.816652
+       Temperature       (K)  =    2001.181829       1997.423252
+       C/S temperature   (K)  =       0.583816          0.387087
+       Pressure         (GPa) =      -3.891866          0.566940
+       Cell parameter : a (A) =       4.847232          4.845292
+       Cell parameter : b (A) =       4.857785          4.853609
+       Cell parameter : c (A) =       5.365318          5.362136
+       Cell angle : alpha (o) =      90.304818         90.199944
+       Cell angle : beta  (o) =      89.894751         89.938389
+       Cell angle : gamma (o) =     119.978565        119.904508
+       Cell volume :   (A**3) =     109.432331        109.312065
+  ** Time :            0.49000 ps :
+     Properties:                   Instantaneous       Averaged
+       Kinetic energy    (eV) =       2.065458          2.065497
+       Potential energy  (eV) =    -383.393687       -383.872181
+       Total energy      (eV) =    -381.328230       -381.806685
+       Temperature       (K)  =    1997.384601       1997.422463
+       C/S temperature   (K)  =       0.663504          0.392728
+       Pressure         (GPa) =       0.511256          0.566249
+       Cell parameter : a (A) =       4.846632          4.845320
+       Cell parameter : b (A) =       4.855678          4.853652
+       Cell parameter : c (A) =       5.361586          5.362125
+       Cell angle : alpha (o) =      90.249264         90.200950
+       Cell angle : beta  (o) =      89.933405         89.938287
+       Cell angle : gamma (o) =     119.934103        119.905112
+       Cell volume :   (A**3) =     109.344623        109.312730
+  ** Time :            0.50000 ps :
+     Properties:                   Instantaneous       Averaged
+       Kinetic energy    (eV) =       2.071969          2.065626
+       Potential energy  (eV) =    -383.702900       -383.868796
+       Total energy      (eV) =    -381.630931       -381.803169
+       Temperature       (K)  =    2003.681181       1997.547638
+       C/S temperature   (K)  =       0.507410          0.395022
+       Pressure         (GPa) =      -0.678885          0.541291
+       Cell parameter : a (A) =       4.842690          4.845267
+       Cell parameter : b (A) =       4.857709          4.853733
+       Cell parameter : c (A) =       5.362053          5.362123
+       Cell angle : alpha (o) =      90.234261         90.201616
+       Cell angle : beta  (o) =      89.922197         89.937965
+       Cell angle : gamma (o) =     119.893655        119.904883
+       Cell volume :   (A**3) =     109.355466        109.313584
+
+  Molecular dynamics production :
+
+  ** Time :            0.01000 ps :
+     Properties:                   Instantaneous       Averaged
+       Kinetic energy    (eV) =       2.054015          2.054015
+       Potential energy  (eV) =    -384.272499       -384.272499
+       Total energy      (eV) =    -382.218484       -382.218484
+       Temperature       (K)  =    1986.319281       1986.319281
+       C/S temperature   (K)  =       0.635598          0.635598
+       Pressure         (GPa) =       2.109850          2.109850
+       Cell parameter : a (A) =       4.696704          4.696704
+       Cell parameter : b (A) =       4.840478          4.840478
+       Cell parameter : c (A) =       5.477910          5.477910
+       Cell angle : alpha (o) =      91.785307         91.785307
+       Cell angle : beta  (o) =      89.387116         89.387116
+       Cell angle : gamma (o) =     120.647403        120.647403
+       Cell volume :   (A**3) =     107.087301        107.087301
+  ** Time :            0.02000 ps :
+     Properties:                   Instantaneous       Averaged
+       Kinetic energy    (eV) =       2.056616          2.055316
+       Potential energy  (eV) =    -382.728757       -383.500628
+       Total energy      (eV) =    -380.672141       -381.445313
+       Temperature       (K)  =    1988.834569       1987.576925
+       C/S temperature   (K)  =       0.469194          0.552396
+       Pressure         (GPa) =      -1.315374          0.355932
+       Cell parameter : a (A) =       5.038993          4.867849
+       Cell parameter : b (A) =       4.794616          4.817547
+       Cell parameter : c (A) =       5.581259          5.529585
+       Cell angle : alpha (o) =      92.329070         92.057188
+       Cell angle : beta  (o) =      88.910467         89.148792
+       Cell angle : gamma (o) =     124.186213        122.416808
+       Cell volume :   (A**3) =     111.451271        109.269286
+  ** Time :            0.03000 ps :
+     Properties:                   Instantaneous       Averaged
+       Kinetic energy    (eV) =       2.052011          2.054214
+       Potential energy  (eV) =    -383.782418       -383.594558
+       Total energy      (eV) =    -381.730407       -381.540344
+       Temperature       (K)  =    1984.381268       1986.511706
+       C/S temperature   (K)  =       0.158245          0.421012
+       Pressure         (GPa) =      -1.108534         -0.131018
+       Cell parameter : a (A) =       5.062682          4.932793
+       Cell parameter : b (A) =       4.844413          4.826502
+       Cell parameter : c (A) =       5.253065          5.437411
+       Cell angle : alpha (o) =      91.094385         91.736254
+       Cell angle : beta  (o) =      91.074003         89.790529
+       Cell angle : gamma (o) =     120.534840        121.789485
+       Cell volume :   (A**3) =     110.887604        109.808725
+  ** Time :            0.04000 ps :
+     Properties:                   Instantaneous       Averaged
+       Kinetic energy    (eV) =       2.054610          2.054313
+       Potential energy  (eV) =    -383.631315       -383.603747
+       Total energy      (eV) =    -381.576705       -381.549434
+       Temperature       (K)  =    1986.894324       1986.607360
+       C/S temperature   (K)  =       0.295523          0.389640
+       Pressure         (GPa) =       2.225208          0.456625
+       Cell parameter : a (A) =       4.891923          4.922576
+       Cell parameter : b (A) =       5.051237          4.882686
+       Cell parameter : c (A) =       4.979097          5.322833
+       Cell angle : alpha (o) =      88.864447         91.018302
+       Cell angle : beta  (o) =      91.958607         90.332548
+       Cell angle : gamma (o) =     117.250156        120.654653
+       Cell volume :   (A**3) =     109.314767        109.685236
+  ** Time :            0.05000 ps :
+     Properties:                   Instantaneous       Averaged
+       Kinetic energy    (eV) =       2.060651          2.055581
+       Potential energy  (eV) =    -383.700206       -383.623039
+       Total energy      (eV) =    -381.639555       -381.567458
+       Temperature       (K)  =    1992.735968       1987.833082
+       C/S temperature   (K)  =       0.289074          0.369527
+       Pressure         (GPa) =      -2.671832         -0.181083
+       Cell parameter : a (A) =       5.100500          4.958160
+       Cell parameter : b (A) =       4.880242          4.882197
+       Cell parameter : c (A) =       5.370953          5.332457
+       Cell angle : alpha (o) =      89.042405         90.623123
+       Cell angle : beta  (o) =      91.173426         90.500724
+       Cell angle : gamma (o) =     122.256121        120.974947
+       Cell volume :   (A**3) =     113.033075        110.354804
+  ** Time :            0.06000 ps :
+     Properties:                   Instantaneous       Averaged
+       Kinetic energy    (eV) =       2.062419          2.056720
+       Potential energy  (eV) =    -383.459343       -383.595756
+       Total energy      (eV) =    -381.396923       -381.539036
+       Temperature       (K)  =    1994.446486       1988.935316
+       C/S temperature   (K)  =       0.173761          0.336899
+       Pressure         (GPa) =       1.337959          0.067705
+       Cell parameter : a (A) =       4.825512          4.936052
+       Cell parameter : b (A) =       4.771406          4.863732
+       Cell parameter : c (A) =       5.567005          5.371548
+       Cell angle : alpha (o) =      89.929265         90.507480
+       Cell angle : beta  (o) =      91.059417         90.593839
+       Cell angle : gamma (o) =     121.004261        120.979832
+       Cell volume :   (A**3) =     109.840625        110.269107
+  ** Time :            0.07000 ps :
+     Properties:                   Instantaneous       Averaged
+       Kinetic energy    (eV) =       2.056387          2.056673
+       Potential energy  (eV) =    -384.213756       -383.684042
+       Total energy      (eV) =    -382.157370       -381.627369
+       Temperature       (K)  =    1988.612512       1988.889201
+       C/S temperature   (K)  =       0.291188          0.330369
+       Pressure         (GPa) =       0.350253          0.108410
+       Cell parameter : a (A) =       4.767123          4.911920
+       Cell parameter : b (A) =       4.864159          4.863793
+       Cell parameter : c (A) =       5.357756          5.369578
+       Cell angle : alpha (o) =      89.847142         90.413146
+       Cell angle : beta  (o) =      89.218428         90.397352
+       Cell angle : gamma (o) =     118.466637        120.620804
+       Cell volume :   (A**3) =     109.199042        110.116241
+  ** Time :            0.08000 ps :
+     Properties:                   Instantaneous       Averaged
+       Kinetic energy    (eV) =       2.066516          2.057903
+       Potential energy  (eV) =    -383.588110       -383.672050
+       Total energy      (eV) =    -381.521594       -381.614147
+       Temperature       (K)  =    1998.408568       1990.079122
+       C/S temperature   (K)  =       0.229031          0.317702
+       Pressure         (GPa) =      -1.482302         -0.088709
+       Cell parameter : a (A) =       4.702420          4.885732
+       Cell parameter : b (A) =       4.739409          4.848245
+       Cell parameter : c (A) =       5.467417          5.381808
+       Cell angle : alpha (o) =      92.234494         90.640814
+       Cell angle : beta  (o) =      87.079111         89.982572
+       Cell angle : gamma (o) =     118.179237        120.315608
+       Cell volume :   (A**3) =     107.253295        109.758373
+  ** Time :            0.09000 ps :
+     Properties:                   Instantaneous       Averaged
+       Kinetic energy    (eV) =       2.067474          2.058967
+       Potential energy  (eV) =    -383.068229       -383.604959
+       Total energy      (eV) =    -381.000755       -381.545993
+       Temperature       (K)  =    1999.334842       1991.107535
+       C/S temperature   (K)  =       0.331538          0.319239
+       Pressure         (GPa) =       4.524430          0.424533
+       Cell parameter : a (A) =       4.686449          4.863590
+       Cell parameter : b (A) =       4.767321          4.839253
+       Cell parameter : c (A) =       5.501261          5.395080
+       Cell angle : alpha (o) =      89.963119         90.565515
+       Cell angle : beta  (o) =      89.913501         89.974897
+       Cell angle : gamma (o) =     118.343265        120.096459
+       Cell volume :   (A**3) =     108.173508        109.582276
+  ** Time :            0.10000 ps :
+     Properties:                   Instantaneous       Averaged
+       Kinetic energy    (eV) =       2.064442          2.059514
+       Potential energy  (eV) =    -382.965249       -383.540988
+       Total energy      (eV) =    -380.900807       -381.481474
+       Temperature       (K)  =    1996.402166       1991.636998
+       C/S temperature   (K)  =       0.372773          0.324593
+       Pressure         (GPa) =      -5.933037         -0.231169
+       Cell parameter : a (A) =       5.294770          4.906708
+       Cell parameter : b (A) =       4.950545          4.850383
+       Cell parameter : c (A) =       5.348569          5.390429
+       Cell angle : alpha (o) =      86.610611         90.170025
+       Cell angle : beta  (o) =      93.058974         90.283305
+       Cell angle : gamma (o) =     125.340054        120.620819
+       Cell volume :   (A**3) =     114.131435        110.037192
+  ** Time :            0.11000 ps :
+     Properties:                   Instantaneous       Averaged
+       Kinetic energy    (eV) =       2.068676          2.060347
+       Potential energy  (eV) =    -383.500221       -383.537282
+       Total energy      (eV) =    -381.431544       -381.476935
+       Temperature       (K)  =    2000.497287       1992.442479
+       C/S temperature   (K)  =       0.409398          0.332302
+       Pressure         (GPa) =       5.114806          0.242058
+       Cell parameter : a (A) =       4.914467          4.907413
+       Cell parameter : b (A) =       4.826493          4.848211
+       Cell parameter : c (A) =       5.377708          5.389273
+       Cell angle : alpha (o) =      90.639136         90.212671
+       Cell angle : beta  (o) =      90.099807         90.266623
+       Cell angle : gamma (o) =     122.480188        120.789852
+       Cell volume :   (A**3) =     107.593208        109.815012
+  ** Time :            0.12000 ps :
+     Properties:                   Instantaneous       Averaged
+       Kinetic energy    (eV) =       2.071154          2.061248
+       Potential energy  (eV) =    -381.871725       -383.398486
+       Total energy      (eV) =    -379.800571       -381.337238
+       Temperature       (K)  =    2002.893275       1993.313379
+       C/S temperature   (K)  =       0.127404          0.315227
+       Pressure         (GPa) =      -7.436485         -0.397113
+       Cell parameter : a (A) =       4.364517          4.862172
+       Cell parameter : b (A) =       4.985761          4.859673
+       Cell parameter : c (A) =       5.337558          5.384963
+       Cell angle : alpha (o) =      91.973550         90.359411
+       Cell angle : beta  (o) =      82.488960         89.618485
+       Cell angle : gamma (o) =     111.331927        120.001692
+       Cell volume :   (A**3) =     107.251052        109.601349
+  ** Time :            0.13000 ps :
+     Properties:                   Instantaneous       Averaged
+       Kinetic energy    (eV) =       2.061439          2.061262
+       Potential energy  (eV) =    -382.934607       -383.362803
+       Total energy      (eV) =    -380.873168       -381.301540
+       Temperature       (K)  =    1993.498570       1993.327624
+       C/S temperature   (K)  =       0.262956          0.311206
+       Pressure         (GPa) =      16.875788          0.889769
+       Cell parameter : a (A) =       4.318016          4.820313
+       Cell parameter : b (A) =       4.843175          4.858404
+       Cell parameter : c (A) =       5.190273          5.369987
+       Cell angle : alpha (o) =      92.684171         90.538239
+       Cell angle : beta  (o) =      79.523391         88.841939
+       Cell angle : gamma (o) =     115.504906        119.655785
+       Cell volume :   (A**3) =      96.272206        108.576030
+  ** Time :            0.14000 ps :
+     Properties:                   Instantaneous       Averaged
+       Kinetic energy    (eV) =       2.068189          2.061757
+       Potential energy  (eV) =    -381.970409       -383.263346
+       Total energy      (eV) =    -379.902220       -381.201589
+       Temperature       (K)  =    2000.026273       1993.806099
+       C/S temperature   (K)  =       0.301632          0.310523
+       Pressure         (GPa) =     -16.399860         -0.477348
+       Cell parameter : a (A) =       4.882194          4.824734
+       Cell parameter : b (A) =       4.807265          4.854751
+       Cell parameter : c (A) =       5.841139          5.403641
+       Cell angle : alpha (o) =      91.340748         90.595561
+       Cell angle : beta  (o) =      87.087275         88.716606
+       Cell angle : gamma (o) =     123.171105        119.906879
+       Cell volume :   (A**3) =     114.601314        109.006407
+  ** Time :            0.15000 ps :
+     Properties:                   Instantaneous       Averaged
+       Kinetic energy    (eV) =       2.070533          2.062342
+       Potential energy  (eV) =    -381.888781       -383.171708
+       Total energy      (eV) =    -379.818248       -381.109366
+       Temperature       (K)  =    2002.292756       1994.371876
+       C/S temperature   (K)  =       0.294745          0.309471
+       Pressure         (GPa) =      19.900881          0.820115
+       Cell parameter : a (A) =       4.998437          4.836314
+       Cell parameter : b (A) =       4.463687          4.828681
+       Cell parameter : c (A) =       5.449464          5.406696
+       Cell angle : alpha (o) =      88.141174         90.431935
+       Cell angle : beta  (o) =      91.862982         88.926364
+       Cell angle : gamma (o) =     123.955922        120.176816
+       Cell volume :   (A**3) =     100.782955        108.458177
+  ** Time :            0.16000 ps :
+     Properties:                   Instantaneous       Averaged
+       Kinetic energy    (eV) =       2.076181          2.063207
+       Potential energy  (eV) =    -382.588502       -383.135258
+       Total energy      (eV) =    -380.512322       -381.072051
+       Temperature       (K)  =    2007.754167       1995.208269
+       C/S temperature   (K)  =       0.681773          0.332740
+       Pressure         (GPa) =     -17.046114         -0.406731
+       Cell parameter : a (A) =       5.005025          4.846858
+       Cell parameter : b (A) =       5.003610          4.839614
+       Cell parameter : c (A) =       5.366836          5.404204
+       Cell angle : alpha (o) =      91.016355         90.468461
+       Cell angle : beta  (o) =      85.471826         88.710456
+       Cell angle : gamma (o) =     118.562552        120.075924
+       Cell volume :   (A**3) =     117.646123        109.032424
+  ** Time :            0.17000 ps :
+     Properties:                   Instantaneous       Averaged
+       Kinetic energy    (eV) =       2.056469          2.062811
+       Potential energy  (eV) =    -383.158989       -383.136654
+       Total energy      (eV) =    -381.102520       -381.073843
+       Temperature       (K)  =    1988.692351       1994.824980
+       C/S temperature   (K)  =       0.315155          0.331705
+       Pressure         (GPa) =      24.077736          0.949160
+       Cell parameter : a (A) =       4.447388          4.823360
+       Cell parameter : b (A) =       4.742490          4.833901
+       Cell parameter : c (A) =       4.995440          5.380159
+       Cell angle : alpha (o) =      90.356489         90.461875
+       Cell angle : beta  (o) =      82.230818         88.329300
+       Cell angle : gamma (o) =     112.400966        119.624456
+       Cell volume :   (A**3) =      96.399376        108.289303
+  ** Time :            0.18000 ps :
+     Properties:                   Instantaneous       Averaged
+       Kinetic energy    (eV) =       2.076571          2.063575
+       Potential energy  (eV) =    -381.577367       -383.050027
+       Total energy      (eV) =    -379.500796       -380.986452
+       Temperature       (K)  =    2008.131607       1995.564237
+       C/S temperature   (K)  =       0.539722          0.343262
+       Pressure         (GPa) =     -18.531700         -0.306843
+       Cell parameter : a (A) =       4.915678          4.828489
+       Cell parameter : b (A) =       4.893424          4.837207
+       Cell parameter : c (A) =       5.619336          5.393447
+       Cell angle : alpha (o) =      89.286049         90.396551
+       Cell angle : beta  (o) =      87.736261         88.296354
+       Cell angle : gamma (o) =     117.644922        119.514482
+       Cell volume :   (A**3) =     119.573438        108.916200
+  ** Time :            0.19000 ps :
+     Properties:                   Instantaneous       Averaged
+       Kinetic energy    (eV) =       2.064153          2.063606
+       Potential energy  (eV) =    -382.556230       -383.024037
+       Total energy      (eV) =    -380.492077       -380.960432
+       Temperature       (K)  =    1996.122918       1995.593641
+       C/S temperature   (K)  =       0.212609          0.336385
+       Pressure         (GPa) =      20.121527          0.712238
+       Cell parameter : a (A) =       5.109709          4.843290
+       Cell parameter : b (A) =       4.575528          4.823435
+       Cell parameter : c (A) =       5.226986          5.384686
+       Cell angle : alpha (o) =      88.093005         90.275312
+       Cell angle : beta  (o) =      92.732649         88.529843
+       Cell angle : gamma (o) =     124.800246        119.792680
+       Cell volume :   (A**3) =     100.231338        108.459102
+  ** Time :            0.20000 ps :
+     Properties:                   Instantaneous       Averaged
+       Kinetic energy    (eV) =       2.066621          2.063756
+       Potential energy  (eV) =    -383.864076       -383.066039
+       Total energy      (eV) =    -381.797455       -381.002283
+       Temperature       (K)  =    1998.509834       1995.739451
+       C/S temperature   (K)  =       0.323452          0.335739
+       Pressure         (GPa) =     -15.601961         -0.206918
+       Cell parameter : a (A) =       5.169781          4.859614
+       Cell parameter : b (A) =       4.865145          4.825520
+       Cell parameter : c (A) =       5.387399          5.384822
+       Cell angle : alpha (o) =      89.972731         90.260183
+       Cell angle : beta  (o) =      89.078742         88.557288
+       Cell angle : gamma (o) =     119.149402        119.760516
+       Cell volume :   (A**3) =     118.320752        108.952184
+
+  Peak dynamic memory used =       1.85 MB
+
+
+  Timing analysis for GULP :
+
+--------------------------------------------------------------------------------
+  Task / Subroutine                                          Time (Seconds)
+--------------------------------------------------------------------------------
+  Calculation of reciprocal space energy and derivatives          1.0112
+  Calculation of real space energy and derivatives                9.4521
+  Calculation of three-body energy and derivatives                0.0321
+  Calculation of matrix inversion                                 0.0065
+  Symmetry generation of equivalent positions                     0.0002
+  Molecular dynamics - update of geometry                         0.0274
+  Molecular dynamics - predictor                                  0.0044
+  Molecular dynamics - corrector                                  0.0322
+  Molecular dynamics - velocity correction                        0.0194
+  Global summation overhead                                       0.0056
+--------------------------------------------------------------------------------
+  Total CPU time                                                 10.6411
+--------------------------------------------------------------------------------
+
+
+  GULP trajectory file written as quartz-npt.trg
+
+
+  Job Finished at 23:29.31  5th August     2022
